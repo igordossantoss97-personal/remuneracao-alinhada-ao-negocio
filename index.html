@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liderança ou Mercado: quem pilota seu negócio? | WorkForce RH</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <style>
+    :root {
+      --offwhite: #FCF9F9;
+      --ink: #08121F;
+      --gold: #C9B180;
+      --prussian: #0A2540;
+      --ink-60: rgba(8,18,31,0.6);
+      --ink-40: rgba(8,18,31,0.4);
+      --ink-08: rgba(8,18,31,0.08);
+      --gold-20: rgba(201,177,128,0.2);
+      --gold-06: rgba(201,177,128,0.06);
+      --off-55: rgba(252,249,249,0.55);
+      --off-25: rgba(252,249,249,0.25);
+    }
+
+    /* ── BASE ── */
+    .reveal-viewport { background: var(--offwhite); }
+
+    .reveal {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--ink);
+    }
+
+    .reveal .slides { text-align: left; }
+
+    .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+      font-family: 'Lexend', sans-serif;
+      color: var(--ink);
+      text-transform: none;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    .reveal section {
+      padding: 52px 72px 40px;
+      height: 100%;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    /* ── SLIDE PROGRESS & NUMBER ── */
+    .reveal .progress { color: var(--gold) !important; height: 2px !important; }
+    .reveal .slide-number {
+      font-family: 'Lexend', sans-serif;
+      font-size: 0.65rem;
+      color: var(--gold) !important;
+      background: transparent !important;
+      bottom: 18px;
+      right: 28px;
+    }
+
+    /* ── SHARED ATOMS ── */
+    .slide-label {
+      font-family: 'Lexend', sans-serif;
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .reveal section h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .section-sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 300;
+      color: var(--ink-60);
+      margin-bottom: 28px;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      left: 72px;
+      font-family: 'Lexend', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-40);
+    }
+
+    .footer-dark { color: var(--off-25) !important; }
+
+    .highlight-box {
+      background: var(--gold-06);
+      border: 1px solid var(--gold-20);
+      padding: 18px 22px;
+      margin-top: 18px;
+    }
+
+    .highlight-box p {
+      font-family: 'Lexend', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .highlight-box p strong { color: var(--gold); font-weight: 600; }
+
+    .reveal ul { list-style: none; padding: 0; margin: 0; }
+
+    .reveal ul li {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 300;
+      color: var(--ink-60);
+      padding: 7px 0 7px 18px;
+      border-bottom: 1px solid var(--ink-08);
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .reveal ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+    }
+
+    .col-label {
+      font-family: 'Lexend', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    /* ── DARK VARIANT ── */
+    .dk { background: var(--ink) !important; }
+    .dk .slide-label { color: var(--gold); }
+    .dk h2 { color: var(--offwhite) !important; }
+    .dk .section-sub { color: var(--off-55) !important; }
+    .dk ul li { color: rgba(252,249,249,0.7); border-color: rgba(252,249,249,0.07); }
+
+    /* ── SLIDE 1: COVER ── */
+    .cover {
+      background: var(--ink) !important;
+      display: flex !important;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .cover .eyebrow {
+      font-family: 'Lexend', sans-serif;
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 36px;
+    }
+
+    .cover h1 {
+      font-family: 'Lexend', sans-serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--offwhite);
+      line-height: 1.1;
+      margin-bottom: 28px;
+      max-width: 80%;
+    }
+
+    .cover h1 em {
+      font-style: normal;
+      color: var(--gold);
+    }
+
+    .cover .rule {
+      width: 52px;
+      height: 2px;
+      background: var(--gold);
+      margin-bottom: 28px;
+    }
+
+    .cover .sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--off-55);
+      margin-bottom: 52px;
+    }
+
+    .cover .meta-row {
+      display: flex;
+      gap: 44px;
+    }
+
+    .cover .meta-item strong {
+      display: block;
+      font-family: 'Lexend', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--offwhite);
+      margin-bottom: 2px;
+    }
+
+    .cover .meta-item span {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 300;
+      color: var(--off-55);
+    }
+
+    /* ── AGENDA ── */
+    .agenda-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .ag-item {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 14px 20px;
+      border-left: 2px solid var(--gold);
+      background: var(--gold-06);
+    }
+
+    .ag-item .n {
+      font-family: 'Lexend', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: var(--gold);
+      min-width: 18px;
+    }
+
+    .ag-item .t {
+      font-family: 'Lexend', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 400;
+      color: var(--ink);
+    }
+
+    /* ── STAT CARDS ── */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-bottom: 16px;
+    }
+
+    .s-card {
+      padding: 24px 20px;
+      border: 1px solid var(--gold-20);
+      background: var(--gold-06);
+    }
+
+    .s-card .num {
+      font-family: 'Lexend', sans-serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .s-card .num em { font-style: normal; color: var(--gold); }
+
+    .s-card .lbl {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 300;
+      color: var(--ink-60);
+      line-height: 1.45;
+      margin-bottom: 10px;
+    }
+
+    .s-card .src {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.6rem;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* ── OBJECTIVES ── */
+    .obj-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .obj {
+      padding: 20px 14px;
+      text-align: center;
+      border: 1px solid var(--gold-20);
+      background: var(--gold-06);
+    }
+
+    .obj .material-icons { font-size: 1.8rem; color: var(--gold); display: block; margin-bottom: 10px; }
+
+    .obj h4 {
+      font-family: 'Lexend', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .obj p {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 300;
+      color: var(--ink-60);
+      line-height: 1.4;
+    }
+
+    /* ── PILLAR GRID ── */
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .pill {
+      padding: 22px 20px;
+      border-top: 2px solid var(--gold);
+      background: rgba(8,18,31,0.025);
+    }
+
+    .pill .n {
+      font-family: 'Lexend', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--gold);
+      opacity: 0.35;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .pill h4 {
+      font-family: 'Lexend', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .pill p {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.74rem;
+      font-weight: 300;
+      color: var(--ink-60);
+      line-height: 1.45;
+    }
+
+    .pill .stat {
+      font-family: 'Lexend', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+    .pill .stat em { font-style: normal; color: var(--gold); }
+
+    .pill .n.kick-sm {
+      font-size: 0.6rem;
+      font-weight: 600;
+      opacity: 1;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    /* ── METRICS GRID ── */
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .met {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 14px 18px;
+      border-left: 2px solid rgba(201,177,128,0.35);
+    }
+
+    .met .material-icons { font-size: 1.1rem; color: var(--gold); flex-shrink: 0; margin-top: 2px; }
+
+    .met h4 {
+      font-family: 'Lexend', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 3px;
+    }
+
+    .met p {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 300;
+      color: var(--ink-60);
+      line-height: 1.4;
+    }
+
+    /* ── TREND LIST ── */
+    .trends {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .trend {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      padding: 16px 20px;
+      border-left: 2px solid var(--gold);
+    }
+
+    .trend .material-icons { font-size: 1.3rem; color: var(--gold); flex-shrink: 0; margin-top: 1px; }
+
+    .trend h4 {
+      font-family: 'Lexend', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .trend p {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 300;
+      color: var(--ink-60);
+      line-height: 1.45;
+    }
+
+    /* ── PROCESS STEPS ── */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+
+    .step {
+      padding: 22px 18px;
+      background: var(--gold-06);
+      border: 1px solid var(--gold-20);
+      margin-right: -1px;
+    }
+
+    .step .n {
+      font-family: 'Lexend', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--gold);
+      opacity: 0.3;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .step h4 {
+      font-family: 'Lexend', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 7px;
+    }
+
+    .step p {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 300;
+      color: var(--ink-60);
+      line-height: 1.45;
+    }
+
+    /* ── BIG QUOTE ── */
+    .bq {
+      font-family: 'Lexend', sans-serif;
+      font-size: 1.55rem;
+      font-weight: 400;
+      color: var(--ink);
+      border-left: 3px solid var(--gold);
+      padding-left: 28px;
+      line-height: 1.45;
+      margin: 28px 0 20px;
+    }
+
+    .bq strong { color: var(--gold); font-weight: 600; }
+
+    .bq cite {
+      display: block;
+      font-size: 0.65rem;
+      font-style: normal;
+      font-family: 'Inter', sans-serif;
+      color: var(--ink-40);
+      margin-top: 10px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* ── CTA SLIDE ── */
+    .cta {
+      background: var(--ink) !important;
+      display: flex !important;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .cta-pill {
+      display: inline-block;
+      align-self: flex-start;
+      font-family: 'Lexend', sans-serif;
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink);
+      background: var(--gold);
+      padding: 7px 14px;
+      margin-bottom: 28px;
+    }
+
+    .cta h2 {
+      font-family: 'Lexend', sans-serif;
+      font-size: 2.6rem !important;
+      font-weight: 700 !important;
+      color: var(--offwhite) !important;
+      line-height: 1.12 !important;
+      max-width: 80%;
+      margin-bottom: 20px !important;
+    }
+
+    .cta h2 em { font-style: normal; color: var(--gold); }
+
+    .cta .sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 300;
+      color: var(--off-55);
+      max-width: 60%;
+      line-height: 1.65;
+      margin-bottom: 44px;
+    }
+
+    .cta-contacts {
+      display: flex;
+      gap: 44px;
+    }
+
+    .cta-contacts .ci strong {
+      display: block;
+      font-family: 'Lexend', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+
+    .cta-contacts .ci span {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: rgba(252,249,249,0.65);
+    }
+
+    /* ── DARK CALLOUT ── */
+    .dark-callout {
+      background: var(--ink);
+      padding: 18px 22px;
+      margin-top: 20px;
+    }
+
+    .dark-callout .lbl {
+      font-family: 'Lexend', sans-serif;
+      font-size: 0.58rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+
+    .dark-callout p {
+      font-family: 'Lexend', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: rgba(252,249,249,0.88);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .dark-callout p em { font-style: normal; color: var(--gold); }
+
+    /* ── SOURCE NOTE ── */
+    .src-note {
+      position: absolute;
+      bottom: 20px;
+      right: 30px;
+      max-width: 60%;
+      text-align: right;
+      font-family: 'Inter', sans-serif;
+      font-style: italic;
+      font-size: 0.6rem;
+      font-weight: 300;
+      color: var(--ink-40);
+      line-height: 1.4;
+    }
+    .dk .src-note { color: var(--off-25); }
+
+    /* ── RICH AGENDA ── */
+    .ag-rich {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      margin-top: 26px;
+    }
+
+    .ag-r {
+      display: grid;
+      grid-template-columns: 46px 1fr;
+      gap: 22px;
+      align-items: start;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--ink-08);
+    }
+    .ag-r:last-child { border-bottom: none; }
+
+    .ag-r .num {
+      font-family: 'Lexend', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--gold);
+      opacity: 0.45;
+      line-height: 1;
+    }
+
+    .ag-r h4 {
+      font-family: 'Lexend', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .ag-r p {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 300;
+      color: var(--ink-60);
+      line-height: 1.5;
+      max-width: 90%;
+    }
+
+    /* ── BIG MANDATE STAT ── */
+    .mandate {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .mandate-hero {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      margin-top: 10px;
+    }
+
+    .mandate-num {
+      font-family: 'Lexend', sans-serif;
+      font-size: 9rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 0.82;
+      letter-spacing: -0.04em;
+    }
+
+    .mandate-body {
+      border-left: 2px solid var(--gold-20);
+      padding-left: 40px;
+    }
+
+    .mandate-body .kick {
+      font-family: 'Lexend', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+
+    .mandate-body p {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--ink-60);
+      line-height: 1.55;
+      max-width: 460px;
+    }
+
+    /* ── DISTRIBUTION BARS ── */
+    .dist-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      margin-top: 22px;
+    }
+
+    .dist h3 {
+      font-family: 'Lexend', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 22px;
+    }
+
+    .bar-row { margin-bottom: 20px; }
+
+    .bar-row .bl {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 7px;
+    }
+
+    .bar-row .bl .lab {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 300;
+      color: var(--ink-60);
+    }
+
+    .bar-row .bl .val {
+      font-family: 'Lexend', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--ink-40);
+    }
+
+    .bar-track {
+      height: 12px;
+      background: var(--ink-08);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      background: rgba(8,18,31,0.22);
+      border-radius: 2px;
+    }
+
+    .bar-row.is-median .val { color: var(--ink); }
+    .bar-row.is-median .bl .lab { color: var(--ink); font-weight: 400; }
+    .bar-row.is-median .bar-fill { background: var(--gold); }
+
+    /* ── BENCHMARKING TRAP (photo + points) ── */
+    .trap-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 44px;
+      align-items: stretch;
+      margin-top: 18px;
+    }
+
+    .photo-slot {
+      position: relative;
+      min-height: 430px;
+      background-color: var(--ink);
+      background-image: url('assets/Neymar.jpeg');
+      background-size: cover;
+      background-position: center center;
+      border: 1px solid var(--gold-20);
+    }
+
+    .photo-slot .ph-hint {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: var(--off-55);
+      font-family: 'Lexend', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 20px;
+    }
+    .photo-slot .ph-hint .material-icons { font-size: 2.4rem; color: var(--gold); }
+
+    .trap-points {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .trap-point {
+      padding: 18px 4px;
+      border-bottom: 1px solid var(--ink-08);
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+    }
+    .trap-point:last-child { border-bottom: none; }
+    .trap-point:last-child h4 { color: var(--gold); }
+
+    .trap-point .tn {
+      font-family: 'Lexend', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--gold);
+      min-width: 20px;
+    }
+
+    .trap-point h4 {
+      font-family: 'Lexend', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: var(--ink);
+    }
+    .trap-point h4 small {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 300;
+      color: var(--ink-60);
+      margin-top: 4px;
+    }
+
+    /* ── 3 COMPONENTS OF TOTAL REWARDS ── */
+    .comp3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .comp-card {
+      display: flex;
+      flex-direction: column;
+      padding: 24px 22px 22px;
+      border: 1px solid var(--gold-20);
+      background: var(--gold-06);
+      border-top: 2px solid var(--gold);
+    }
+
+    .comp-card .ic {
+      font-family: 'Material Icons';
+      font-size: 1.7rem;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+
+    .comp-card .comp-name {
+      font-family: 'Lexend', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+
+    .comp-card .strat-row {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 16px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--gold-20);
+    }
+
+    .comp-card .strat-row .arrow {
+      font-family: 'Lexend', sans-serif;
+      font-size: 0.7rem;
+      color: var(--gold);
+    }
+
+    .comp-card .strat {
+      font-family: 'Lexend', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: -0.01em;
+    }
+
+    .comp-card ul { margin: 0; }
+
+    .comp-card ul li {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.74rem;
+      font-weight: 300;
+      color: var(--ink-60);
+      line-height: 1.45;
+      padding: 6px 0 6px 16px;
+      border-bottom: none;
+    }
+    .comp-card ul li::before { content: '·'; color: var(--gold); font-weight: 700; }
+  </style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+
+<!-- ═══════════════════════════════════════════
+     1 · COVER
+════════════════════════════════════════════ -->
+<section class="cover">
+  <div class="eyebrow">WorkForce RH</div>
+  <h1>Como alinhar a estratégia de remuneração aos objetivos de negócio</h1>
+  <div class="rule"></div>
+  <div class="meta-row">
+    <div class="meta-item">
+      <strong>Tema</strong>
+      <span>Eficácia organizacional &amp; liderança em remuneração</span>
+    </div>
+  </div>
+  <div class="footer footer-dark">WorkForce RH</div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     2 · A HISTÓRIA
+════════════════════════════════════════════ -->
+<section>
+  <div class="slide-label">O ponto de partida</div>
+  <h2>O benchmarking virou <span style="color:var(--gold)">inimigo da estratégia</span></h2>
+  <p class="section-sub">Por bons anos eu era o cara que acreditava que o mercado vai ditar a minha prática.</p>
+
+  <div class="bq">
+    Ao oferecer estratégia de remuneração aos clientes de pesquisa salarial, ouvi a mesma resposta:<br>
+    "<strong>Por que eu preciso de estratégia? A pesquisa salarial já é a minha estratégia.</strong>"
+    <cite>O insight que originou esta palestra</cite>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <div class="col-label">O diagnóstico</div>
+      <ul>
+        <li>O mercado supervalorizou o benchmarking</li>
+        <li>A obsessão por "prática de mercado" virou regra</li>
+        <li>Empresas esquecem de conectar com a própria estratégia</li>
+      </ul>
+    </div>
+    <div>
+      <div class="col-label">A missão de hoje</div>
+      <ul style="border-left:1px solid rgba(201,177,128,0.2);padding-left:18px">
+        <li>Sair do "neutro de mercado" para o "orientado ao negócio"</li>
+        <li>Tornar a remuneração um motor de eficácia</li>
+        <li>Decidir sobre pessoas com a mesma lógica das finanças</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer">WorkForce RH</div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     3 · ESTRUTURA / POR QUE AGORA
+════════════════════════════════════════════ -->
+<section>
+  <div class="slide-label">Agenda</div>
+  <h2>A jornada de hoje</h2>
+  <p class="section-sub">Três movimentos para fechar o gap entre remuneração e negócio</p>
+
+  <div class="ag-rich">
+    <div class="ag-r">
+      <div class="num">01</div>
+      <div>
+        <h4>Além do dado de mercado: encontrando a identidade estratégica</h4>
+        <p>Explorando a "armadilha do benchmarking" e por que priorizar a paridade de mercado em detrimento de objetivos únicos de negócio impede as empresas de alcançar um foco estratégico claro.</p>
+      </div>
+    </div>
+    <div class="ag-r">
+      <div class="num">02</div>
+      <div>
+        <h4>O desafio do alinhamento</h4>
+        <p>Um mergulho nas barreiras sistêmicas — da mentalidade de centro de custo às lacunas de comunicação — que impedem a remuneração de espelhar a intenção da liderança.</p>
+      </div>
+    </div>
+    <div class="ag-r">
+      <div class="num">03</div>
+      <div>
+        <h4>Fechando o gap: integrando estratégias de liderança à remuneração</h4>
+        <p>Um framework orientado pela liderança para conectar a remuneração à performance do negócio, garantindo eficácia organizacional por meio da integração estratégica.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">WorkForce RH</div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     3B · O MANDATO 2026
+════════════════════════════════════════════ -->
+<section class="mandate">
+  <div class="slide-label">O mandato 2026 de Total Rewards</div>
+  <h2>Por que essa conversa é crítica agora</h2>
+
+  <div class="mandate-hero">
+    <div class="mandate-num">#1</div>
+    <div class="mandate-body">
+      <div class="kick">Prioridade global</div>
+      <p>O alinhamento estratégico dos programas de Total Rewards com os objetivos organizacionais é hoje a principal prioridade das empresas no mundo.</p>
+    </div>
+  </div>
+
+  <div class="src-note">Fonte: WorldatWork Global Total Rewards Survey 2026</div>
+  <div class="footer">WorkForce RH</div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     4 · ESTADO ATUAL (DADOS)
+════════════════════════════════════════════ -->
+<section>
+  <div class="slide-label">Parte 1 · O estado atual</div>
+  <h2>A maturidade estratégica não acompanha o discurso</h2>
+  <p class="section-sub">Todos falam em estratégia — poucos realmente a praticam</p>
+
+  <div class="two-col" style="margin-top:10px">
+    <div class="s-card">
+      <div class="num"><em>61%</em></div>
+      <div class="lbl">têm uma estratégia formal de Total Rewards — ou seja, um documento escrito de remuneração. Uma parcela enorme do mercado sequer tem um plano.</div>
+      <div class="src">Com estratégia formal</div>
+    </div>
+    <div class="s-card">
+      <div class="num"><em>43%</em></div>
+      <div class="lbl">mesmo entre as que têm estratégia formal, admitem que ela está <em>desalinhada</em> das metas de negócio.</div>
+      <div class="src">O gap estratégico</div>
+    </div>
+  </div>
+  <div style="text-align: right; font-family: 'Inter', sans-serif; font-style: italic; font-size: 0.6rem; color: var(--ink-40); margin-top: 4px; margin-bottom: 16px;">Fonte: Payscale Compensation Best Practices Report 2026 | WTW Survey</div>
+
+  <div class="highlight-box">
+    <p>O comportamento é mais sobre <strong>seguir o mercado</strong> do que sobre conectar a remuneração à própria estratégia de negócio.</p>
+  </div>
+  <div class="footer">WorkForce RH</div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     4B · A MEDIANA COMO PADRÃO
+════════════════════════════════════════════ -->
+<section>
+  <div class="slide-label">A mediana como padrão global</div>
+  <h2>Todo mundo ancora no mesmo ponto</h2>
+  <p class="section-sub">Como as empresas posicionam sua estratégia de remuneração frente ao mercado</p>
+
+  <div class="dist-cols">
+    <div class="dist">
+      <h3>Mercado Global</h3>
+      <div class="bar-row">
+        <div class="bl"><span class="lab">Abaixo da mediana</span><span class="val">16%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:16%"></div></div>
+      </div>
+      <div class="bar-row is-median">
+        <div class="bl"><span class="lab">Mediana de mercado</span><span class="val">63%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:63%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bl"><span class="lab">Acima da mediana</span><span class="val">21%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:21%"></div></div>
+      </div>
+    </div>
+
+    <div class="dist">
+      <h3>Mercado Brasileiro</h3>
+      <div class="bar-row">
+        <div class="bl"><span class="lab">1º Quartil</span><span class="val">5%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:5%"></div></div>
+      </div>
+      <div class="bar-row is-median">
+        <div class="bl"><span class="lab">Mediana de mercado</span><span class="val">77%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:77%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bl"><span class="lab">3º Quartil</span><span class="val">18%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:18%"></div></div>
+      </div>
+    </div>
+  </div>
+  <div style="text-align: right; font-family: 'Inter', sans-serif; font-style: italic; font-size: 0.6rem; color: var(--ink-40); margin-top: 10px;">Fonte: WorldatWork Compensation Programs and Practices Survey | Carreira Muller Brazil Survey 2025</div>
+  <div class="footer">WorkForce RH</div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     5 · A ARMADILHA / COMMODITIES  (dark)
+════════════════════════════════════════════ -->
+<section>
+  <div class="slide-label">A armadilha do benchmarking</div>
+  <h2>Se todos seguem a mediana, ninguém tem estratégia</h2>
+  <p class="section-sub">Imagine pagar a um craque geracional como Neymar Jr. exatamente a "mediana de qualquer jogador". O que aconteceria?</p>
+
+  <div class="trap-grid">
+    <div class="photo-slot">
+    </div>
+
+    <div class="trap-points">
+      <div class="trap-point">
+        <span class="tn">01</span>
+        <h4>Benchmarking = Neutralidade
+          <small>A mediana é o caminho mais seguro — e por isso mesmo o mais genérico.</small>
+        </h4>
+      </div>
+      <div class="trap-point">
+        <span class="tn">02</span>
+        <h4>Tratar o talento como "commodity"
+          <small>Pagar a média a quem é exceção é nivelar o craque por baixo.</small>
+        </h4>
+      </div>
+      <div class="trap-point">
+        <span class="tn">03</span>
+        <h4>O risco de perder seus craques
+          <small>Tratado como commodity, o talento se desmotiva — e vai embora.</small>
+        </h4>
+      </div>
+      <div class="trap-point">
+        <span class="tn">04</span>
+        <h4>A estratégia vive no "Delta"
+          <small>O diferencial está na diferença intencional em relação ao mercado.</small>
+        </h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">WorkForce RH</div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     6 · O DELTA
+════════════════════════════════════════════ -->
+<section>
+  <div class="slide-label">O conceito-chave</div>
+  <h2>A estratégia vive no Delta</h2>
+  <p class="section-sub">O Delta é a diferença intencional entre a prática de mercado e a sua estratégia de remuneração</p>
+
+  <div class="two-col" style="margin-top:8px">
+    <div>
+      <div class="col-label">Sem Delta — a armadilha</div>
+      <ul>
+        <li>Você apenas espelha a mediana de mercado</li>
+        <li>Não há nada único nos seus programas</li>
+        <li>Nada que te diferencie dos concorrentes</li>
+        <li>Remuneração vira commodity</li>
+      </ul>
+    </div>
+    <div>
+      <div class="col-label">Com Delta — a estratégia</div>
+      <ul>
+        <li>Existe um diferenciador claro e intencional</li>
+        <li>Algo que ninguém mais está fazendo</li>
+        <li>Conectado às metas e à cultura do negócio</li>
+        <li>Remuneração vira vantagem competitiva</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="dark-callout">
+    <div class="lbl">A pergunta que fica</div>
+    <p>Nos seus programas de Total Rewards, existe algo <em>único</em> — algo que realmente te separa dos concorrentes? Se a resposta for "nada", você provavelmente está na <em>armadilha do benchmarking</em>.</p>
+  </div>
+
+  <div class="footer">WorkForce RH</div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     7 · O VALUE GAP
+════════════════════════════════════════════ -->
+<section>
+  <div class="slide-label">O value gap</div>
+  <h2>Milhões investidos — e a própria empresa não vê eficácia</h2>
+  <p class="section-sub">O custo de remunerar olhando só para o mercado</p>
+
+  <div class="stats-row">
+    <div class="s-card">
+      <div class="num"><em>77%</em></div>
+      <div class="lbl">classificam a própria estratégia de remuneração como apenas <em>moderadamente eficaz — ou pior</em></div>
+      <div class="src">Estratégia ineficaz</div>
+    </div>
+    <div class="s-card">
+      <div class="num"><em>33%</em></div>
+      <div class="lbl">apenas um terço alinha os programas de incentivo aos objetivos organizacionais — que comportamento estamos incentivando?</div>
+      <div class="src">Incentivos desalinhados</div>
+    </div>
+    <div class="s-card">
+      <div class="num"><em>27%</em></div>
+      <div class="lbl">priorizam alinhar benefícios ao que o colaborador realmente quer, em vez de simplesmente seguir o benchmark</div>
+      <div class="src">Alinhamento de benefícios</div>
+    </div>
+  </div>
+  <div style="text-align: right; font-family: 'Inter', sans-serif; font-style: italic; font-size: 0.6rem; color: var(--ink-40); margin-top: 4px; margin-bottom: 16px;">Fonte: HR.com 2025-26 | CaptivateIQ 2025 | WTW 2024</div>
+
+  <div class="highlight-box">
+    <p>Continuamos presos num ciclo de <strong>gastar com base no que os outros fazem</strong>, em vez de ouvir as necessidades do próprio negócio e dos próprios colaboradores.</p>
+  </div>
+  <div class="footer">WorkForce RH</div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     8 · O PEDÁGIO DA PERFORMANCE
+════════════════════════════════════════════ -->
+<section>
+  <div class="slide-label">O pedágio da performance</div>
+  <h2>A obsessão pelo mercado dispara uma reação em cadeia</h2>
+  <p class="section-sub">Três elos que corroem o resultado do negócio</p>
+
+  <div class="pillars">
+    <div class="pill">
+      <div class="n">01</div>
+      <div class="stat"><em>−63%</em></div>
+      <h4>Impacto na Confiança</h4>
+      <p>Quando falta transparência salarial, a confiança do colaborador na empresa cai 63%. Sem entender a lógica, ninguém confia no sistema.</p>
+    </div>
+    <div class="pill">
+      <div class="n">02</div>
+      <div class="stat"><em>−50%</em></div>
+      <h4>Impacto na Produtividade</h4>
+      <p>Quem não entende o próprio Total Rewards é 50% menos propenso a se tornar um alto performer. Pagamos, mas não recebemos o que compramos.</p>
+    </div>
+    <div class="pill">
+      <div class="n">03</div>
+      <div class="stat"><em>+75%</em></div>
+      <h4>Impacto na Retenção</h4>
+      <p>Quem <em>percebe</em> o próprio pagamento como injusto é 75% mais propenso a procurar outro emprego — independentemente de pagar acima ou abaixo do mercado.</p>
+    </div>
+  </div>
+  <div style="text-align: right; font-family: 'Inter', sans-serif; font-style: italic; font-size: 0.6rem; color: var(--ink-40); margin-top: 10px; margin-bottom: 16px;">Fonte: Payscale Global Survey 2025</div>
+
+  <div class="highlight-box">
+    <p>Isso já não é um problema de RH. É um <strong>problema organizacional</strong>.</p>
+  </div>
+  <div class="footer">WorkForce RH</div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     9 · OS 3 OBSTÁCULOS
+════════════════════════════════════════════ -->
+<section>
+  <div class="slide-label">Parte 2 · O desafio do alinhamento</div>
+  <h2>Os 3 maiores obstáculos ao alinhamento</h2>
+  <p class="section-sub">O que impede a remuneração de conversar com a estratégia do negócio</p>
+
+  <div class="pillars">
+    <div class="pill">
+      <div class="n kick-sm">Obstáculo 01</div>
+      <div class="stat"><em>81%</em></div>
+      <h4>A mentalidade de "centro de custo"</h4>
+      <p>81% dos CFOs veem o RH como centro de custo, não como gerador de valor. O negócio trata Total Rewards como despesa a gerir — não como ativo a otimizar.</p>
+    </div>
+    <div class="pill">
+      <div class="n kick-sm">Obstáculo 02</div>
+      <div class="stat"><em>54%</em></div>
+      <h4>O muro do orçamento</h4>
+      <p>54% citam o orçamento rígido como principal barreira. Ele força um modelo "tamanho único", dificultando recompensar o top talent e apoiar prioridades do negócio.</p>
+    </div>
+    <div class="pill">
+      <div class="n kick-sm">Obstáculo 03</div>
+      <div class="stat"><em>24%</em></div>
+      <h4>A lacuna de comunicação</h4>
+      <p>Apenas 24% dos colaboradores entendem o critério e a lógica do próprio pagamento. Uma estratégia mal comunicada é uma estratégia que não existe.</p>
+    </div>
+  </div>
+  <div style="text-align: right; font-family: 'Inter', sans-serif; font-style: italic; font-size: 0.6rem; color: var(--ink-40); margin-top: 10px;">Fonte: Payscale Compensation Best Practices Report</div>
+  <div class="footer">WorkForce RH</div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     10 · TRADUÇÃO RH → FINANÇAS
+════════════════════════════════════════════ -->
+<section>
+  <div class="slide-label">Quebrando a barreira de linguagem</div>
+  <h2>Finanças falam de <span style="color:var(--gold)">placar</span>: receita, margem, ROI</h2>
+  <p class="section-sub">O RH precisa traduzir conceitos subjetivos em impacto no resultado</p>
+
+  <div class="two-col" style="margin-top:8px">
+    <div>
+      <div class="col-label">A linguagem que não conecta</div>
+      <ul>
+        <li>"O turnover aumentou 4% no último ano"</li>
+        <li>"O engajamento caiu 25%"</li>
+        <li>Conceitos subjetivos, sem ligação com o bottom line</li>
+      </ul>
+    </div>
+    <div>
+      <div class="col-label">A linguagem que convence</div>
+      <ul style="border-left:1px solid rgba(201,177,128,0.2);padding-left:18px">
+        <li>"O turnover de +4% gerou R$ 1,5 mi em custo de reposição"</li>
+        <li>"A queda no engajamento reduziu o NPS, a retenção de clientes e custou R$ 10 mi em receita"</li>
+        <li>Correlações, sempre traduzidas em números</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <div class="col-label" style="margin-bottom: 6px;">A virada de chave</div>
+    <p>Remuneração não é custo — é <em>investimento</em>. E todo investimento se justifica com <em>ROI</em>.</p>
+  </div>
+
+  <div class="footer">WorkForce RH</div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     13B · OS 3 COMPONENTES DA REMUNERAÇÃO TOTAL
+════════════════════════════════════════════ -->
+<section>
+  <div class="slide-label">Onde focar o investimento</div>
+  <h2>Cada componente da remuneração serve a uma estratégia</h2>
+  <p class="section-sub">A remuneração total se divide em três alavancas — e cada uma envia uma mensagem diferente</p>
+
+  <div class="comp3">
+    <div class="comp-card">
+      <span class="ic">person_add</span>
+      <div class="comp-name">Salário Fixo</div>
+      <div class="strat-row"><span class="arrow">estratégia de</span><span class="strat">Atração</span></div>
+      <ul>
+        <li>É o que mais facilita atrair novos talentos</li>
+        <li>Fácil de justificar e de explicar ao colaborador</li>
+        <li>O caminho mais simples — porém o mais caro e o menos flexível</li>
+      </ul>
+    </div>
+
+    <div class="comp-card">
+      <span class="ic">trending_up</span>
+      <div class="comp-name">Remuneração Variável</div>
+      <div class="strat-row"><span class="arrow">estratégia de</span><span class="strat">Competitividade</span></div>
+      <ul>
+        <li>Permite ser conservador no fixo e agressivo no variável</li>
+        <li>Modelo win-win: entregou resultado, é recompensado</li>
+        <li>Direciona comportamento e premia a performance</li>
+      </ul>
+    </div>
+
+    <div class="comp-card">
+      <span class="ic">favorite</span>
+      <div class="comp-name">Benefícios</div>
+      <div class="strat-row"><span class="arrow">estratégia de</span><span class="strat">Retenção</span></div>
+      <ul>
+        <li>Forte para reter — constrói permanência no longo prazo</li>
+        <li>Fraco para atrair: dificilmente se contrata só com benefícios</li>
+        <li>Atende ao que o colaborador realmente valoriza</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <p>Não existe alavanca certa ou errada — existe a <strong>combinação intencional</strong> que responde ao momento e à estratégia do negócio. O caminho equilibrado tenta ser competitivo nas três.</p>
+  </div>
+
+  <div class="footer">WorkForce RH</div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     11 · O FRAMEWORK (5 DIMENSÕES)
+════════════════════════════════════════════ -->
+<section>
+  <div class="slide-label">Parte 3 · Fechando o gap</div>
+  <h2>Um framework para construir a estratégia</h2>
+  <p class="section-sub">As perguntas que uma consultoria faz ao C-level antes de recomendar uma estratégia de remuneração</p>
+
+  <div class="obj-row">
+    <div class="obj">
+      <span class="material-icons">flag</span>
+      <h4>Objetivo de Negócio</h4>
+      <p>Qual a prioridade do próximo ciclo? Turnaround, conservação, M&amp;A ou expansão agressiva</p>
+    </div>
+    <div class="obj">
+      <span class="material-icons">groups</span>
+      <h4>Cultura</h4>
+      <p>Que valores e comportamentos a remuneração precisa sustentar e reforçar</p>
+    </div>
+    <div class="obj">
+      <span class="material-icons">diversity_3</span>
+      <h4>Grupo de Talentos</h4>
+      <p>Quais perfis são críticos e onde está a verdadeira disputa por talento</p>
+    </div>
+    <div class="obj">
+      <span class="material-icons">center_focus_strong</span>
+      <h4>Foco da Remuneração</h4>
+      <p>Onde concentrar recursos: base, variável ou benefícios</p>
+    </div>
+    <div class="obj">
+      <span class="material-icons">explore</span>
+      <h4>Intenção de Liderança</h4>
+      <p>Que mensagem a liderança quer enviar com a política de pay</p>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <p>Respondidas as 5 dimensões, verifica-se o <strong>orçamento</strong> e testa-se se a estratégia está — ou não — <strong>alinhada aos objetivos do negócio</strong>.</p>
+  </div>
+
+  <div class="footer">WorkForce RH</div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     12 · TAKEAWAYS
+════════════════════════════════════════════ -->
+<section>
+  <div class="slide-label">Para levar para casa</div>
+  <h2>Os 4 takeaways da palestra</h2>
+  <p class="section-sub">O essencial para transformar remuneração em vantagem competitiva</p>
+
+  <div class="steps" style="margin-bottom:18px">
+    <div class="step">
+      <div class="n">01</div>
+      <h4>Fuja da armadilha do benchmarking</h4>
+      <p>Pare de desperdiçar orçamento perseguindo a paridade de mercado e reajustes lineares. Seja intencional.</p>
+    </div>
+    <div class="step">
+      <div class="n">02</div>
+      <h4>A estratégia dita o dado</h4>
+      <p>E não o contrário. Conecte os programas às metas do negócio para virar um motor de eficácia.</p>
+    </div>
+    <div class="step">
+      <div class="n">03</div>
+      <h4>Remuneração é investimento</h4>
+      <p>Não é custo. Justifique com ROI e posicione a área como parceira estratégica do negócio.</p>
+    </div>
+    <div class="step">
+      <div class="n">04</div>
+      <h4>Precisão otimiza o orçamento</h4>
+      <p>Com recursos limitados, seja cirúrgico. Precisão é o melhor otimizador de budget que existe.</p>
+    </div>
+  </div>
+
+  <div class="footer">WorkForce RH</div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     13 · CTA / ENCERRAMENTO
+════════════════════════════════════════════ -->
+<section class="cta">
+  <div class="cta-pill">WorkForce RH · Remuneração Estratégica</div>
+  <h2>Não deixe o mercado pilotar o seu navio. Seja o <em>arquiteto</em> da sua estratégia de remuneração.</h2>
+  <p class="sub">Decisões sobre pessoas devem ser tão baseadas em dados quanto qualquer decisão financeira. É assim que a remuneração deixa de seguir o mercado e passa a liderar o negócio.</p>
+  <div class="footer footer-dark">WorkForce RH</div>
+</section>
+
+
+</div><!-- /slides -->
+</div><!-- /reveal -->
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    slideNumber: 'c/t',
+    progress: true,
+    controls: true,
+    controlsTutorial: false,
+    center: false,
+    transition: 'fade',
+    transitionSpeed: 'slow',
+    backgroundTransition: 'fade',
+    width: 1280,
+    height: 720,
+    margin: 0,
+    minScale: 0.2,
+    maxScale: 2.0,
+  });
+</script>
+
+<!-- ── FULLSCREEN BUTTON ── -->
+<button id="btn-fullscreen" title="Tela cheia" onclick="toggleFullscreen()" aria-label="Alternar tela cheia">
+  <svg id="icon-expand" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="15 3 21 3 21 9"/>
+    <polyline points="9 21 3 21 3 15"/>
+    <line x1="21" y1="3" x2="14" y2="10"/>
+    <line x1="3" y1="21" x2="10" y2="14"/>
+  </svg>
+  <svg id="icon-compress" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+    <polyline points="4 14 10 14 10 20"/>
+    <polyline points="20 10 14 10 14 4"/>
+    <line x1="10" y1="14" x2="3" y2="21"/>
+    <line x1="21" y1="3" x2="14" y2="10"/>
+  </svg>
+</button>
+
+<style>
+  #btn-fullscreen {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid rgba(201,177,128,0.4);
+    background: rgba(8,18,31,0.75);
+    backdrop-filter: blur(8px);
+    color: #C9B180;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    transition: background 0.2s, border-color 0.2s, transform 0.15s;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.35);
+  }
+  #btn-fullscreen:hover {
+    background: rgba(201,177,128,0.15);
+    border-color: rgba(201,177,128,0.8);
+    transform: scale(1.08);
+  }
+  #btn-fullscreen svg {
+    width: 18px;
+    height: 18px;
+  }
+</style>
+
+<script>
+  function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+    } else {
+      document.exitFullscreen();
+    }
+  }
+  document.addEventListener('fullscreenchange', () => {
+    const isFS = !!document.fullscreenElement;
+    document.getElementById('icon-expand').style.display  = isFS ? 'none' : '';
+    document.getElementById('icon-compress').style.display = isFS ? '' : 'none';
+  });
+</script>
+</body>
+</html>

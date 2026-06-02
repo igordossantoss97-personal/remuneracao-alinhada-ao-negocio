@@ -1,0 +1,11 @@
+FOTO DO NEYMAR — slide "A armadilha do benchmarking"
+
+Coloque aqui uma imagem licenciada do Neymar Jr. com o nome exato:
+
+    neymar.jpg
+
+Dimensões recomendadas: retrato (vertical), no mínimo 600 x 800 px.
+A foto preenche automaticamente o quadro à esquerda do slide.
+
+Enquanto o arquivo não existir, o slide mostra um espaço reservado
+com o ícone de bola e a indicação "Inserir foto Neymar Jr."
