@@ -1005,6 +1005,305 @@
       color: var(--offwhite);
       font-weight: 500;
     }
+
+    /* ── DATA SALARIAL SLIDES ── */
+    .ds-logo-wrap {
+      display: inline-block;
+      background: rgba(252,249,249,0.93);
+      padding: 8px 20px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+    }
+
+    .ds-logo {
+      height: 38px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .ds-stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: rgba(201,177,128,0.18);
+      margin-top: 26px;
+      margin-bottom: 20px;
+    }
+
+    .ds-stat {
+      background: var(--ink);
+      padding: 18px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .ds-num {
+      font-family: 'Lexend', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .ds-lbl {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 300;
+      color: rgba(252,249,249,0.5);
+    }
+
+    .ds-partners {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 300;
+      color: rgba(252,249,249,0.4);
+    }
+
+    .ds-partners strong { color: rgba(252,249,249,0.82); font-weight: 500; }
+    .ds-partners .sep { color: rgba(201,177,128,0.35); }
+
+    /* ── DS BANCO DE DADOS ── */
+    .ds-bank-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin: 18px 0 14px;
+    }
+
+    .ds-bank-stat {
+      background: rgba(201,177,128,0.06);
+      border: 1px solid rgba(201,177,128,0.15);
+      border-radius: 8px;
+      padding: 20px 18px;
+    }
+
+    .ds-bank-num {
+      font-family: 'Lexend', sans-serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .ds-bank-lbl {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 300;
+      color: rgba(252,249,249,0.55);
+    }
+
+    .ds-badges-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 12px;
+      justify-content: center;
+    }
+
+    .ds-badge {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 16px;
+      border: 1px solid rgba(201,177,128,0.22);
+      border-radius: 50px;
+      font-family: 'Lexend', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 400;
+      color: rgba(252,249,249,0.65);
+    }
+
+    .ds-badge .material-icons { font-size: 0.82rem; color: var(--gold); }
+
+    .ds-tagline {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 300;
+      color: rgba(252,249,249,0.4);
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .ds-sectors {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: center;
+    }
+
+    .ds-sector {
+      padding: 5px 12px;
+      border: 1px solid rgba(201,177,128,0.18);
+      border-radius: 50px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.62rem;
+      font-weight: 300;
+      color: rgba(252,249,249,0.45);
+    }
+
+    /* ── PARTNERSHIP ANNOUNCEMENT ── */
+    .partner-grid {
+      display: grid;
+      grid-template-columns: 1fr 28px 1fr 28px 1fr;
+      gap: 0;
+      align-items: center;
+      margin-top: 36px;
+      margin-bottom: 28px;
+    }
+
+    .partner-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      padding: 28px 20px;
+      border: 1px solid rgba(201,177,128,0.15);
+      background: rgba(201,177,128,0.04);
+    }
+
+    .partner-logo {
+      width: 210px;
+      height: 80px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .partner-sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 300;
+      color: rgba(252,249,249,0.4);
+      text-align: center;
+      line-height: 1.4;
+      margin-top: 2px;
+    }
+
+    .partner-sub strong {
+      color: rgba(252,249,249,0.75);
+      font-weight: 500;
+    }
+
+    .partner-sep {
+      text-align: center;
+      font-family: 'Lexend', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: rgba(201,177,128,0.3);
+    }
+
+    .ds-announce-box {
+      background: rgba(201,177,128,0.07);
+      border: 1px solid rgba(201,177,128,0.2);
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .ds-announce-box .material-icons { color: var(--gold); font-size: 1.2rem; flex-shrink: 0; }
+
+    .ds-announce-box p {
+      font-family: 'Lexend', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: rgba(252,249,249,0.85);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .ds-announce-box p strong { color: var(--gold); font-weight: 600; }
+
+    /* features + video */
+    .ds-feat-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 36px;
+      margin-top: 18px;
+      align-items: start;
+    }
+
+    .ds-video-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: rgba(201,177,128,0.04);
+      border: 1px solid rgba(201,177,128,0.2);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .ds-video-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    .ds-video-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .ds-play-ring {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .ds-play-ring .material-icons { color: var(--gold); font-size: 1.9rem; }
+
+    .ds-video-label {
+      font-family: 'Lexend', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(252,249,249,0.3);
+    }
+
+    .ds-feat-list { display: flex; flex-direction: column; gap: 0; padding-top: 4px; }
+
+    .ds-feat {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 13px 0;
+      border-bottom: 1px solid rgba(252,249,249,0.07);
+    }
+
+    .ds-feat:last-child { border-bottom: none; }
+
+    .ds-feat .material-icons { font-size: 1rem; color: var(--gold); flex-shrink: 0; margin-top: 3px; }
+
+    .ds-feat h4 {
+      font-family: 'Lexend', sans-serif;
+      font-size: 0.83rem;
+      font-weight: 600;
+      color: var(--offwhite);
+      margin-bottom: 3px;
+    }
+
+    .ds-feat p {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 300;
+      color: rgba(252,249,249,0.5);
+      line-height: 1.4;
+    }
   </style>
 </head>
 <body>
@@ -1666,6 +1965,170 @@
   <div style="font-family: 'Lexend', sans-serif; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 36px;"><span style="color: var(--offwhite);">Share</span> Talks</div>
   <div class="cta-pill">Remuneração Estratégica</div>
   <h2>Tire o mercado do banco do motorista. Assuma o volante da sua <span style="color:var(--gold)">estratégia de remuneração</span>.</h2>
+  <div class="footer footer-dark"></div>
+</section>
+
+
+
+<!-- ═══════════════════════════════════════════
+     13B · PARCERIA — WORKFORCE RH × SHARE
+════════════════════════════════════════════ -->
+<section class="cover">
+  <div class="eyebrow"><span style="color:var(--offwhite)">Share</span> Talks · Parceria Exclusiva</div>
+
+  <h1 style="font-size:2.1rem; max-width:80%; margin-bottom:6px;">Uma nova era para as decisões de <em>remuneração no Brasil</em></h1>
+  <div class="cover sub" style="margin-bottom:0;">Tecnologia, dados e consultoria reunidos em um só lugar.</div>
+
+  <div class="partner-grid">
+    <div class="partner-card">
+      <div class="partner-logo" style="background-image:url('assets/workforce-logo.png')"></div>
+      <div class="partner-sub">Criadora do <strong>Data Salarial</strong></div>
+    </div>
+
+    <div class="partner-sep">×</div>
+
+    <div class="partner-card">
+      <div class="partner-logo" style="background-image:url('assets/share-logo.png'); background-size: 85%;"></div>
+      <div class="partner-sub">Parceira <strong>Exclusiva</strong></div>
+    </div>
+
+    <div class="partner-sep" style="font-size:1.5rem; color:var(--gold); opacity:0.5;">→</div>
+
+    <div class="partner-card" style="border-color:rgba(201,177,128,0.35); background:rgba(201,177,128,0.08);">
+      <div class="partner-logo" style="background-image:url('assets/datasalarial-logo.png')"></div>
+      <div class="partner-sub"><strong style="color:var(--gold);">Ferramenta Estratégica</strong><br>de Remuneração</div>
+    </div>
+  </div>
+
+  <div class="ds-announce-box">
+    <span class="material-icons">verified</span>
+    <p>A <strong>Share People Hub</strong> é a única parceira autorizada a oferecer o <strong>Data Salarial</strong> ao mercado — além da própria Workforce RH. Uma parceria exclusiva para levar inteligência salarial ao próximo nível.</p>
+  </div>
+
+  <div class="footer footer-dark"></div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     14 · DATA SALARIAL — LANÇAMENTO
+════════════════════════════════════════════ -->
+<section class="cover" style="justify-content:flex-start; padding-top:38px;">
+  <div class="eyebrow" style="margin-bottom:14px;"><span style="color:var(--offwhite)">Share</span> Talks · Lançamento Exclusivo</div>
+
+  <div style="width:180px;height:42px;background-image:url('assets/datasalarial-logo.png');background-size:contain;background-repeat:no-repeat;background-position:left center;margin-top:16px;margin-bottom:4px;"></div>
+
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:0;">
+
+  <div class="ds-bank-stats">
+    <div class="ds-bank-stat">
+      <div class="ds-bank-num">+2.500</div>
+      <div class="ds-bank-lbl">Cargos Mapeados</div>
+    </div>
+    <div class="ds-bank-stat">
+      <div class="ds-bank-num">+2.000</div>
+      <div class="ds-bank-lbl">Empresas na Base</div>
+    </div>
+    <div class="ds-bank-stat">
+      <div class="ds-bank-num">+80</div>
+      <div class="ds-bank-lbl">Mercados</div>
+    </div>
+    <div class="ds-bank-stat">
+      <div class="ds-bank-num">27</div>
+      <div class="ds-bank-lbl">Estados</div>
+    </div>
+  </div>
+
+  <div class="ds-badges-row">
+    <div class="ds-badge"><span class="material-icons">bar_chart</span>Tratamento Estatístico</div>
+    <div class="ds-badge"><span class="material-icons">autorenew</span>Atualização Semestral</div>
+    <div class="ds-badge"><span class="material-icons">verified</span>Fontes Confiáveis</div>
+  </div>
+
+  <div class="ds-tagline">Dados de todos os segmentos estratégicos da economia nacional, em todo o território nacional</div>
+
+  <div class="ds-sectors">
+    <span class="ds-sector">Construção Civil e Incorporação</span>
+    <span class="ds-sector">Bens de Consumo</span>
+    <span class="ds-sector">Indústria Automotiva</span>
+    <span class="ds-sector">Papel e Celulose</span>
+    <span class="ds-sector">Educação</span>
+    <span class="ds-sector">Saúde</span>
+    <span class="ds-sector">Serviços</span>
+    <span class="ds-sector">Comunicação</span>
+    <span class="ds-sector">Agro Indústria</span>
+    <span class="ds-sector">Tecnologia</span>
+    <span class="ds-sector">Transportes e Logística</span>
+    <span class="ds-sector">Embalagens</span>
+    <span class="ds-sector">Varejo</span>
+    <span class="ds-sector">Máquinas e Equipamentos</span>
+  </div>
+
+  </div><!-- /flex center wrapper -->
+
+  <div style="position:absolute; bottom:36px; left:72px;">
+    <p style="font-family:'Inter',sans-serif; font-size:0.65rem; font-weight:300; color:rgba(252,249,249,0.25); font-style:italic; line-height:1.4; margin:0; max-width:480px;">"Transforme a gestão de remuneração em uma alavanca estratégica de crescimento."</p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     15 · DATA SALARIAL — DEMO & FUNCIONALIDADES
+════════════════════════════════════════════ -->
+<section class="cover" style="justify-content:flex-start;padding-top:44px;">
+  <div class="slide-label" style="color:var(--gold)">Data Salarial · Demo &amp; Funcionalidades</div>
+  <h2 style="color:var(--offwhite);margin-bottom:4px;">A plataforma de pesquisa salarial <em style="font-style:normal;color:var(--gold)">completa</em> para o mercado</h2>
+
+  <div class="ds-feat-grid">
+    <div class="ds-video-wrap">
+      <!-- SUBSTITUA PELO EMBED DO VÍDEO QUANDO DISPONÍVEL -->
+      <!-- <iframe src="https://www.youtube.com/embed/SEU_ID_AQUI?rel=0" allowfullscreen></iframe> -->
+      <div class="ds-video-placeholder">
+        <div class="ds-play-ring">
+          <span class="material-icons">play_arrow</span>
+        </div>
+        <span class="ds-video-label">Demo da Plataforma</span>
+      </div>
+    </div>
+
+    <div class="ds-feat-list">
+      <div class="ds-feat">
+        <span class="material-icons">payments</span>
+        <div>
+          <h4>Remuneração Total</h4>
+          <p>Salário fixo, variável e benefícios. Mapeie valores e melhores práticas para decisões assertivas.</p>
+        </div>
+      </div>
+      <div class="ds-feat">
+        <span class="material-icons">bar_chart</span>
+        <div>
+          <h4>Percentis e Posicionamento</h4>
+          <p>Compare por percentis (P10 a P90) e entenda exatamente onde sua empresa está.</p>
+        </div>
+      </div>
+      <div class="ds-feat">
+        <span class="material-icons">tune</span>
+        <div>
+          <h4>Filtros e Comparações</h4>
+          <p>Análises por cargo, senioridade, porte, regime, setor e região.</p>
+        </div>
+      </div>
+      <div class="ds-feat">
+        <span class="material-icons">show_chart</span>
+        <div>
+          <h4>Simulação de Cenários</h4>
+          <p>Projete ajustes, promoções e enquadramentos com custo previsível.</p>
+        </div>
+      </div>
+      <div class="ds-feat">
+        <span class="material-icons">manage_search</span>
+        <div>
+          <h4>Diagnóstico Salarial</h4>
+          <p>Cruze seus dados com o mercado e identifique distorções com análise granular.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="footer footer-dark"></div>
 </section>
 
