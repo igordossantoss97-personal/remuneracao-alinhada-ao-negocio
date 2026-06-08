@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Liderança ou Mercado: quem pilota seu negócio? | WorkForce RH</title>
+  <title>Liderança ou Mercado: quem pilota seu negócio?</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reset.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
@@ -177,7 +177,7 @@
 
     .cover .eyebrow {
       font-family: 'Lexend', sans-serif;
-      font-size: 0.62rem;
+      font-size: 0.85rem;
       font-weight: 500;
       letter-spacing: 0.22em;
       text-transform: uppercase;
@@ -932,6 +932,79 @@
       border-bottom: none;
     }
     .comp-card ul li::before { content: '·'; color: var(--gold); font-weight: 700; }
+
+    /* ── SPEAKER BIO ── */
+    .spk-grid {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 52px;
+      align-items: center;
+      margin-top: 24px;
+    }
+
+    .spk-photo {
+      width: 240px;
+      height: 320px;
+      background-color: rgba(201,177,128,0.08);
+      background-image: url('assets/igor.jpg');
+      background-size: cover;
+      background-position: center top;
+      border: 1px solid rgba(201,177,128,0.25);
+      border-radius: 12px;
+      flex-shrink: 0;
+    }
+
+    .spk-name {
+      font-family: 'Lexend', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--offwhite);
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+
+    .spk-role {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1.45;
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(201,177,128,0.2);
+    }
+
+    .spk-creds { display: flex; flex-direction: column; gap: 0; }
+
+    .spk-cred {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      padding: 13px 0;
+      border-bottom: 1px solid rgba(252,249,249,0.07);
+    }
+
+    .spk-cred:last-child { border-bottom: none; }
+
+    .spk-cred .dash {
+      font-family: 'Lexend', sans-serif;
+      font-size: 0.75rem;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .spk-cred span {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 300;
+      color: rgba(252,249,249,0.7);
+      line-height: 1.45;
+    }
+
+    .spk-cred span strong {
+      color: var(--offwhite);
+      font-weight: 500;
+    }
   </style>
 </head>
 <body>
@@ -943,8 +1016,8 @@
      1 · COVER
 ════════════════════════════════════════════ -->
 <section class="cover">
-  <div class="eyebrow">WorkForce RH</div>
-  <h1>Como alinhar a estratégia de remuneração aos objetivos de negócio</h1>
+  <div class="eyebrow"><span style="color: var(--offwhite);">Share</span> Talks</div>
+  <h1>Como alinhar a <span style="color:var(--gold)">estratégia de remuneração</span> aos objetivos de negócio</h1>
   <div class="rule"></div>
   <div class="meta-row">
     <div class="meta-item">
@@ -952,7 +1025,43 @@
       <span>Eficácia organizacional &amp; liderança em remuneração</span>
     </div>
   </div>
-  <div class="footer footer-dark">WorkForce RH</div>
+  <div class="footer footer-dark"></div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     1B · APRESENTAÇÃO DO SPEAKER
+════════════════════════════════════════════ -->
+<section class="cover">
+  <div class="eyebrow"><span style="color:var(--offwhite)">Share</span> Talks · Speaker</div>
+
+  <div class="spk-grid">
+    <div class="spk-photo"></div>
+    <div>
+      <div class="spk-name">Igor dos Santos</div>
+      <div class="spk-role">Consultor e Parceiro da Share RH<br>(Núcleo Rewards)</div>
+      <div class="spk-creds">
+        <div class="spk-cred">
+          <span class="dash">—</span>
+          <span><strong>+10 anos</strong> de atuação em Remuneração e Benefícios</span>
+        </div>
+        <div class="spk-cred">
+          <span class="dash">—</span>
+          <span><strong>+50 projetos</strong> de Remuneração conduzidos</span>
+        </div>
+        <div class="spk-cred">
+          <span class="dash">—</span>
+          <span>Artigo publicado de <strong>Workforce Planning</strong></span>
+        </div>
+        <div class="spk-cred">
+          <span class="dash">—</span>
+          <span>Fundador e Idealizador da <strong>Workforce RH</strong> e do <strong>Data Salarial</strong></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer footer-dark"></div>
 </section>
 
 
@@ -962,12 +1071,12 @@
 <section>
   <div class="slide-label">O ponto de partida</div>
   <h2>O benchmarking virou <span style="color:var(--gold)">inimigo da estratégia</span></h2>
-  <p class="section-sub">Por bons anos eu era o cara que acreditava que o mercado vai ditar a minha prática.</p>
+  <p class="section-sub">Por muitos anos, acreditei que o mercado ditaria a minha prática.</p>
 
   <div class="bq">
     Ao oferecer estratégia de remuneração aos clientes de pesquisa salarial, ouvi a mesma resposta:<br>
     "<strong>Por que eu preciso de estratégia? A pesquisa salarial já é a minha estratégia.</strong>"
-    <cite>O insight que originou esta palestra</cite>
+    <cite>O insight que originou este talks</cite>
   </div>
 
   <div class="two-col">
@@ -989,7 +1098,7 @@
     </div>
   </div>
 
-  <div class="footer">WorkForce RH</div>
+  <div class="footer"></div>
 </section>
 
 
@@ -1013,19 +1122,19 @@
       <div class="num">02</div>
       <div>
         <h4>O desafio do alinhamento</h4>
-        <p>Um mergulho nas barreiras sistêmicas — da mentalidade de centro de custo às lacunas de comunicação — que impedem a remuneração de espelhar a intenção da liderança.</p>
+        <p>Um mergulho nas barreiras sistêmicas, da mentalidade de centro de custo às lacunas de comunicação, que impedem a remuneração de espelhar a intenção da liderança.</p>
       </div>
     </div>
     <div class="ag-r">
       <div class="num">03</div>
       <div>
-        <h4>Fechando o gap: integrando estratégias de liderança à remuneração</h4>
-        <p>Um framework orientado pela liderança para conectar a remuneração à performance do negócio, garantindo eficácia organizacional por meio da integração estratégica.</p>
+        <h4>Fechando o gap: do framework à prática</h4>
+        <p>Apresentação de um framework para conectar a remuneração aos objetivos do negócio, incluindo 2 cases reais para ilustrar a aplicação desse alinhamento na prática.</p>
       </div>
     </div>
   </div>
 
-  <div class="footer">WorkForce RH</div>
+  <div class="footer"></div>
 </section>
 
 
@@ -1045,7 +1154,7 @@
   </div>
 
   <div class="src-note">Fonte: WorldatWork Global Total Rewards Survey 2026</div>
-  <div class="footer">WorkForce RH</div>
+  <div class="footer"></div>
 </section>
 
 
@@ -1055,12 +1164,12 @@
 <section>
   <div class="slide-label">Parte 1 · O estado atual</div>
   <h2>A maturidade estratégica não acompanha o discurso</h2>
-  <p class="section-sub">Todos falam em estratégia — poucos realmente a praticam</p>
+  <p class="section-sub">Todos falam em estratégia, mas poucos realmente a praticam</p>
 
   <div class="two-col" style="margin-top:10px">
     <div class="s-card">
       <div class="num"><em>61%</em></div>
-      <div class="lbl">têm uma estratégia formal de Total Rewards — ou seja, um documento escrito de remuneração. Uma parcela enorme do mercado sequer tem um plano.</div>
+      <div class="lbl">têm uma estratégia formal de Total Rewards, ou seja, um documento escrito de remuneração. Uma parcela enorme do mercado sequer tem um plano.</div>
       <div class="src">Com estratégia formal</div>
     </div>
     <div class="s-card">
@@ -1074,7 +1183,7 @@
   <div class="highlight-box">
     <p>O comportamento é mais sobre <strong>seguir o mercado</strong> do que sobre conectar a remuneração à própria estratégia de negócio.</p>
   </div>
-  <div class="footer">WorkForce RH</div>
+  <div class="footer"></div>
 </section>
 
 
@@ -1120,7 +1229,7 @@
     </div>
   </div>
   <div style="text-align: right; font-family: 'Inter', sans-serif; font-style: italic; font-size: 0.6rem; color: var(--ink-40); margin-top: 10px;">Fonte: WorldatWork Compensation Programs and Practices Survey | Carreira Muller Brazil Survey 2025</div>
-  <div class="footer">WorkForce RH</div>
+  <div class="footer"></div>
 </section>
 
 
@@ -1140,7 +1249,7 @@
       <div class="trap-point">
         <span class="tn">01</span>
         <h4>Benchmarking = Neutralidade
-          <small>A mediana é o caminho mais seguro — e por isso mesmo o mais genérico.</small>
+          <small>A mediana é o caminho mais seguro e, por isso mesmo, o mais genérico.</small>
         </h4>
       </div>
       <div class="trap-point">
@@ -1152,7 +1261,7 @@
       <div class="trap-point">
         <span class="tn">03</span>
         <h4>O risco de perder seus craques
-          <small>Tratado como commodity, o talento se desmotiva — e vai embora.</small>
+          <small>Tratado como commodity, o talento se desmotiva e vai embora.</small>
         </h4>
       </div>
       <div class="trap-point">
@@ -1164,7 +1273,7 @@
     </div>
   </div>
 
-  <div class="footer">WorkForce RH</div>
+  <div class="footer"></div>
 </section>
 
 
@@ -1178,7 +1287,7 @@
 
   <div class="two-col" style="margin-top:8px">
     <div>
-      <div class="col-label">Sem Delta — a armadilha</div>
+      <div class="col-label">Sem Delta: a armadilha</div>
       <ul>
         <li>Você apenas espelha a mediana de mercado</li>
         <li>Não há nada único nos seus programas</li>
@@ -1187,7 +1296,7 @@
       </ul>
     </div>
     <div>
-      <div class="col-label">Com Delta — a estratégia</div>
+      <div class="col-label">Com Delta: a estratégia</div>
       <ul>
         <li>Existe um diferenciador claro e intencional</li>
         <li>Algo que ninguém mais está fazendo</li>
@@ -1199,10 +1308,10 @@
 
   <div class="dark-callout">
     <div class="lbl">A pergunta que fica</div>
-    <p>Nos seus programas de Total Rewards, existe algo <em>único</em> — algo que realmente te separa dos concorrentes? Se a resposta for "nada", você provavelmente está na <em>armadilha do benchmarking</em>.</p>
+    <p>Nos seus programas de Total Rewards, existe algo <em>único</em> que realmente te separa dos concorrentes? Se a resposta for "nada", você provavelmente está na <em>armadilha do benchmarking</em>.</p>
   </div>
 
-  <div class="footer">WorkForce RH</div>
+  <div class="footer"></div>
 </section>
 
 
@@ -1211,18 +1320,18 @@
 ════════════════════════════════════════════ -->
 <section>
   <div class="slide-label">O value gap</div>
-  <h2>Milhões investidos — e a própria empresa não vê eficácia</h2>
+  <h2>Milhões investidos e a própria empresa não vê eficácia</h2>
   <p class="section-sub">O custo de remunerar olhando só para o mercado</p>
 
   <div class="stats-row">
     <div class="s-card">
       <div class="num"><em>77%</em></div>
-      <div class="lbl">classificam a própria estratégia de remuneração como apenas <em>moderadamente eficaz — ou pior</em></div>
+      <div class="lbl">classificam a própria estratégia de remuneração como apenas <em>moderadamente eficaz ou pior</em></div>
       <div class="src">Estratégia ineficaz</div>
     </div>
     <div class="s-card">
       <div class="num"><em>33%</em></div>
-      <div class="lbl">apenas um terço alinha os programas de incentivo aos objetivos organizacionais — que comportamento estamos incentivando?</div>
+      <div class="lbl">Apenas um terço alinha os programas de incentivo aos objetivos organizacionais. Que comportamento estamos incentivando?</div>
       <div class="src">Incentivos desalinhados</div>
     </div>
     <div class="s-card">
@@ -1236,7 +1345,7 @@
   <div class="highlight-box">
     <p>Continuamos presos num ciclo de <strong>gastar com base no que os outros fazem</strong>, em vez de ouvir as necessidades do próprio negócio e dos próprios colaboradores.</p>
   </div>
-  <div class="footer">WorkForce RH</div>
+  <div class="footer"></div>
 </section>
 
 
@@ -1265,7 +1374,7 @@
       <div class="n">03</div>
       <div class="stat"><em>+75%</em></div>
       <h4>Impacto na Retenção</h4>
-      <p>Quem <em>percebe</em> o próprio pagamento como injusto é 75% mais propenso a procurar outro emprego — independentemente de pagar acima ou abaixo do mercado.</p>
+      <p>Quem <em>percebe</em> o próprio pagamento como injusto é 75% mais propenso a procurar outro emprego, independentemente de pagar acima ou abaixo do mercado.</p>
     </div>
   </div>
   <div style="text-align: right; font-family: 'Inter', sans-serif; font-style: italic; font-size: 0.6rem; color: var(--ink-40); margin-top: 10px; margin-bottom: 16px;">Fonte: Payscale Global Survey 2025</div>
@@ -1273,7 +1382,7 @@
   <div class="highlight-box">
     <p>Isso já não é um problema de RH. É um <strong>problema organizacional</strong>.</p>
   </div>
-  <div class="footer">WorkForce RH</div>
+  <div class="footer"></div>
 </section>
 
 
@@ -1290,7 +1399,7 @@
       <div class="n kick-sm">Obstáculo 01</div>
       <div class="stat"><em>81%</em></div>
       <h4>A mentalidade de "centro de custo"</h4>
-      <p>81% dos CFOs veem o RH como centro de custo, não como gerador de valor. O negócio trata Total Rewards como despesa a gerir — não como ativo a otimizar.</p>
+      <p>81% dos CFOs veem o RH como centro de custo, não como gerador de valor. O negócio trata Total Rewards como despesa a gerir e não como ativo a otimizar.</p>
     </div>
     <div class="pill">
       <div class="n kick-sm">Obstáculo 02</div>
@@ -1306,7 +1415,7 @@
     </div>
   </div>
   <div style="text-align: right; font-family: 'Inter', sans-serif; font-style: italic; font-size: 0.6rem; color: var(--ink-40); margin-top: 10px;">Fonte: Payscale Compensation Best Practices Report</div>
-  <div class="footer">WorkForce RH</div>
+  <div class="footer"></div>
 </section>
 
 
@@ -1339,10 +1448,10 @@
 
   <div class="highlight-box">
     <div class="col-label" style="margin-bottom: 6px;">A virada de chave</div>
-    <p>Remuneração não é custo — é <em>investimento</em>. E todo investimento se justifica com <em>ROI</em>.</p>
+    <p>Remuneração não é custo, é <em>investimento</em>. E todo investimento se justifica com <em>ROI</em>.</p>
   </div>
 
-  <div class="footer">WorkForce RH</div>
+  <div class="footer"></div>
 </section>
 
 
@@ -1352,7 +1461,7 @@
 <section>
   <div class="slide-label">Onde focar o investimento</div>
   <h2>Cada componente da remuneração serve a uma estratégia</h2>
-  <p class="section-sub">A remuneração total se divide em três alavancas — e cada uma envia uma mensagem diferente</p>
+  <p class="section-sub">A remuneração total se divide em três alavancas, e cada uma envia uma mensagem diferente</p>
 
   <div class="comp3">
     <div class="comp-card">
@@ -1362,7 +1471,7 @@
       <ul>
         <li>É o que mais facilita atrair novos talentos</li>
         <li>Fácil de justificar e de explicar ao colaborador</li>
-        <li>O caminho mais simples — porém o mais caro e o menos flexível</li>
+        <li>O caminho mais simples, porém o mais caro e o menos flexível</li>
       </ul>
     </div>
 
@@ -1382,7 +1491,7 @@
       <div class="comp-name">Benefícios</div>
       <div class="strat-row"><span class="arrow">estratégia de</span><span class="strat">Retenção</span></div>
       <ul>
-        <li>Forte para reter — constrói permanência no longo prazo</li>
+        <li>Forte para reter: constrói permanência no longo prazo</li>
         <li>Fraco para atrair: dificilmente se contrata só com benefícios</li>
         <li>Atende ao que o colaborador realmente valoriza</li>
       </ul>
@@ -1390,10 +1499,10 @@
   </div>
 
   <div class="highlight-box">
-    <p>Não existe alavanca certa ou errada — existe a <strong>combinação intencional</strong> que responde ao momento e à estratégia do negócio. O caminho equilibrado tenta ser competitivo nas três.</p>
+    <p>Não existe alavanca certa ou errada, existe a <strong>combinação intencional</strong> que responde ao momento e à estratégia do negócio. O caminho equilibrado tenta ser competitivo nas três.</p>
   </div>
 
-  <div class="footer">WorkForce RH</div>
+  <div class="footer"></div>
 </section>
 
 
@@ -1434,10 +1543,84 @@
   </div>
 
   <div class="highlight-box">
-    <p>Respondidas as 5 dimensões, verifica-se o <strong>orçamento</strong> e testa-se se a estratégia está — ou não — <strong>alinhada aos objetivos do negócio</strong>.</p>
+    <p>Respondidas as 5 dimensões, verifica-se o <strong>orçamento</strong> e testa-se se a estratégia está ou não <strong>alinhada aos objetivos do negócio</strong>.</p>
   </div>
 
-  <div class="footer">WorkForce RH</div>
+  <div class="footer"></div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     CASE 1: STARTUP DE TECNOLOGIA
+════════════════════════════════════════════ -->
+<section>
+  <div class="slide-label">Case Prático 01</div>
+  <h2>Startup de Tecnologia em Hipercrescimento</h2>
+  <p class="section-sub">Expansão agressiva em um mercado promissor com alta demanda técnica</p>
+
+  <div class="two-col" style="margin-top:8px">
+    <div>
+      <div class="col-label">O Cenário</div>
+      <p style="font-size: 0.82rem; font-weight: 300; color: var(--ink-60); line-height: 1.5; margin-bottom: 12px;">80 colaboradores (50 no time de desenvolvimento). A empresa descobriu um mercado altamente promissor e já possui um grande cliente comprador.</p>
+      <p style="font-size: 0.82rem; font-weight: 300; color: var(--ink-60); line-height: 1.5;"><strong>Desafio:</strong> Exige conhecimento técnico robusto e precisará crescer a operação de forma rápida e sólida para conseguir atender a demanda.</p>
+    </div>
+    <div>
+      <div class="col-label">A Estratégia de Remuneração</div>
+      <ul style="border-left:1px solid rgba(201,177,128,0.2);padding-left:18px">
+        <li><strong>Principal Objetivo de Negócio:</strong> Expansão Agressiva</li>
+        <li><strong>Competitividade Interna:</strong> Alta (Diferenciação clara orientada a performance)</li>
+        <li><strong>Foco da organização:</strong> Inovação</li>
+        <li><strong>Abordagem preferida:</strong> Atrair top performers</li>
+        <li><strong>Grupo de talentos:</strong> Estratégicos (Funções que impulsionam inovação)</li>
+        <li><strong>Comunicação de Remuneração:</strong> Influente (Gestores como alavanca)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="highlight-box fragment">
+    <div class="col-label" style="margin-bottom: 6px;">Posicionamento Estratégico</div>
+    <p>O investimento é direcionado para <strong>Bônus e Participação</strong> como alavanca principal.<br>
+    <strong>Fixo:</strong> P75 &nbsp;|&nbsp; <strong>Variável:</strong> P90 &nbsp;|&nbsp; <strong>Benefícios:</strong> Conservador</p>
+  </div>
+
+  <div class="footer"></div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     CASE 2: INDÚSTRIA TRADICIONAL
+════════════════════════════════════════════ -->
+<section>
+  <div class="slide-label">Case Prático 02</div>
+  <h2>Indústria Tradicional em Retração</h2>
+  <p class="section-sub">Cenário de turnaround e recuperação de margens em uma cidade do interior</p>
+
+  <div class="two-col" style="margin-top:8px">
+    <div>
+      <div class="col-label">O Cenário</div>
+      <p style="font-size: 0.82rem; font-weight: 300; color: var(--ink-60); line-height: 1.5; margin-bottom: 12px;">300 colaboradores. Queda na margem líquida por inflação e conflitos globais, forçando repasse de preços e perda de competitividade.</p>
+      <p style="font-size: 0.82rem; font-weight: 300; color: var(--ink-60); line-height: 1.5;"><strong>Desafio:</strong> A empresa está neste cenário há 3 anos com previsões negativas, perdendo profissionais operacionais devido ao momento ruim do negócio.</p>
+    </div>
+    <div>
+      <div class="col-label">A Estratégia de Remuneração</div>
+      <ul style="border-left:1px solid rgba(201,177,128,0.2);padding-left:18px">
+        <li><strong>Principal Objetivo de Negócio:</strong> Turnaround e Recuperação</li>
+        <li><strong>Competitividade Interna:</strong> Moderada (Competição equilibrada com colaboração)</li>
+        <li><strong>Foco da organização:</strong> Resultados (Principalmente financeiros)</li>
+        <li><strong>Abordagem preferida:</strong> Desenvolver internamente (Devido dificuldades financeiras)</li>
+        <li><strong>Grupo de talentos:</strong> Operacional (Cargos de base saindo)</li>
+        <li><strong>Comunicação de Remuneração:</strong> Silenciosa (Gestores evitam o tema)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="highlight-box fragment">
+    <div class="col-label" style="margin-bottom: 6px;">Posicionamento Estratégico</div>
+    <p>Foco na <strong>Remuneração Fixa</strong> para cargos de base para estancar a perda de profissionais.<br>
+    <strong>Fixo:</strong> P50 &nbsp;|&nbsp; <strong>Variável:</strong> P25 &nbsp;|&nbsp; <strong>Benefícios:</strong> Agressivo (Foco em retenção)</p>
+  </div>
+
+  <div class="footer"></div>
 </section>
 
 
@@ -1446,7 +1629,7 @@
 ════════════════════════════════════════════ -->
 <section>
   <div class="slide-label">Para levar para casa</div>
-  <h2>Os 4 takeaways da palestra</h2>
+  <h2>Os 4 takeaways do Talks</h2>
   <p class="section-sub">O essencial para transformar remuneração em vantagem competitiva</p>
 
   <div class="steps" style="margin-bottom:18px">
@@ -1472,7 +1655,7 @@
     </div>
   </div>
 
-  <div class="footer">WorkForce RH</div>
+  <div class="footer"></div>
 </section>
 
 
@@ -1480,10 +1663,10 @@
      13 · CTA / ENCERRAMENTO
 ════════════════════════════════════════════ -->
 <section class="cta">
-  <div class="cta-pill">WorkForce RH · Remuneração Estratégica</div>
-  <h2>Não deixe o mercado pilotar o seu navio. Seja o <em>arquiteto</em> da sua estratégia de remuneração.</h2>
-  <p class="sub">Decisões sobre pessoas devem ser tão baseadas em dados quanto qualquer decisão financeira. É assim que a remuneração deixa de seguir o mercado e passa a liderar o negócio.</p>
-  <div class="footer footer-dark">WorkForce RH</div>
+  <div style="font-family: 'Lexend', sans-serif; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 36px;"><span style="color: var(--offwhite);">Share</span> Talks</div>
+  <div class="cta-pill">Remuneração Estratégica</div>
+  <h2>Tire o mercado do banco do motorista. Assuma o volante da sua <span style="color:var(--gold)">estratégia de remuneração</span>.</h2>
+  <div class="footer footer-dark"></div>
 </section>
 
 
