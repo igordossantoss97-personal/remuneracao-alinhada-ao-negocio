@@ -1145,6 +1145,11 @@
       color: rgba(252,249,249,0.45);
     }
 
+    /* ── VIDEO FULLSCREEN FIX (reveal.js transform conflict) ── */
+    video:-webkit-full-screen { position: fixed; inset: 0; width: 100vw; height: 100vh; z-index: 99999; object-fit: contain; background: #000; }
+    video:-moz-full-screen    { position: fixed; inset: 0; width: 100vw; height: 100vh; z-index: 99999; object-fit: contain; background: #000; }
+    video:fullscreen           { position: fixed; inset: 0; width: 100vw; height: 100vh; z-index: 99999; object-fit: contain; background: #000; }
+
     /* ── PARTNERSHIP ANNOUNCEMENT ── */
     .partner-grid {
       display: grid;
@@ -2080,14 +2085,9 @@
 
   <div class="ds-feat-grid">
     <div class="ds-video-wrap">
-      <!-- SUBSTITUA PELO EMBED DO VÍDEO QUANDO DISPONÍVEL -->
-      <!-- <iframe src="https://www.youtube.com/embed/SEU_ID_AQUI?rel=0" allowfullscreen></iframe> -->
-      <div class="ds-video-placeholder">
-        <div class="ds-play-ring">
-          <span class="material-icons">play_arrow</span>
-        </div>
-        <span class="ds-video-label">Demo da Plataforma</span>
-      </div>
+      <video controls preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <source src="assets/V2.1m30.mp4" type="video/mp4">
+      </video>
     </div>
 
     <div class="ds-feat-list">
@@ -2154,6 +2154,70 @@
     minScale: 0.2,
     maxScale: 2.0,
   });
+</script>
+
+<!-- ── VIDEO FULLSCREEN FIX ── -->
+<script>
+  Reveal.on('ready', function() {
+    document.querySelectorAll('video').forEach(function(video) {
+
+      // Quando o browser entra em fullscreen nativo, cancela e abre o overlay
+      ['fullscreenchange','webkitfullscreenchange','mozfullscreenchange','MSFullscreenChange'].forEach(function(evt) {
+        document.addEventListener(evt, function() {
+          var fsEl = document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement;
+          if (fsEl === video) {
+            // Sai do fullscreen nativo imediatamente
+            (document.exitFullscreen || document.webkitExitFullscreen || document.mozCancelFullScreen).call(document);
+            // Abre nosso overlay
+            setTimeout(function() { showVideoOverlay(video); }, 80);
+          }
+        });
+      });
+
+      // Intercepta também via requestFullscreen (fallback)
+      ['requestFullscreen','webkitRequestFullscreen','mozRequestFullScreen','msRequestFullscreen'].forEach(function(m) {
+        if (video[m]) video[m] = function() { showVideoOverlay(video); };
+      });
+    });
+  });
+
+  function showVideoOverlay(video) {
+    var overlay = document.createElement('div');
+    overlay.style.cssText = 'position:fixed;inset:0;background:#000;z-index:999999;display:flex;align-items:center;justify-content:center;';
+
+    var v2 = document.createElement('video');
+    v2.style.cssText = 'width:100%;height:100%;object-fit:contain;';
+    v2.controls = true;
+    v2.currentTime = video.currentTime || 0;
+
+    var src = video.querySelector('source');
+    if (src) {
+      var s2 = document.createElement('source');
+      s2.src = src.src;
+      s2.type = src.type;
+      v2.appendChild(s2);
+    }
+
+    var closeBtn = document.createElement('div');
+    closeBtn.innerHTML = '✕';
+    closeBtn.style.cssText = 'position:absolute;top:20px;right:28px;color:#C9B180;font-size:1.6rem;cursor:pointer;font-family:Lexend,sans-serif;line-height:1;';
+
+    overlay.appendChild(v2);
+    overlay.appendChild(closeBtn);
+    document.body.appendChild(overlay);
+    v2.play();
+
+    function closeOverlay() {
+      try { video.currentTime = v2.currentTime; } catch(e) {}
+      document.body.removeChild(overlay);
+      document.removeEventListener('keydown', escHandler);
+    }
+
+    closeBtn.addEventListener('click', closeOverlay);
+
+    function escHandler(e) { if (e.key === 'Escape') closeOverlay(); }
+    document.addEventListener('keydown', escHandler);
+  }
 </script>
 
 <!-- ── FULLSCREEN BUTTON ── -->
